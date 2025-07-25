@@ -2,17 +2,25 @@ package main
 
 import "log"
 
+type User struct {
+	FirstName string
+	LastName string
+}
+
 func main() {
-	myMap := make(map[string]int)
+	myMap := make(map[string]User)
 
-	myMap["apple"] = 5
-	myMap["banana"] = 10
-	myMap["orange"] = 15
-	myMap["mango"] = 25
+	myMap["user1"] = User{FirstName: "Umesh", LastName: "Kedimi"}
+	myMap["user2"] = User{FirstName: "Sujatha", LastName: "Kedimi"}
 
-	log.Println("Initial map:", myMap)
+	log.Println("User 1:", myMap["user1"].FirstName, myMap["user1"].LastName)
+	log.Println("User 2:", myMap["user2"].FirstName, myMap["user2"].LastName)
 
-	for key, value := range myMap {
-	log.Printf("Key: %s, Value: %d\n", key, value)
+	me := User{
+		FirstName: "Umesh", 
+		LastName: "Kedimi",
 	}
+
+	myMap["me"] = me
+	log.Println("Me:", myMap["me"].FirstName, myMap["me"].LastName)
 }
