@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-type engine struct {}
+type Engine struct {}
 
-func (e engine) Start() {
+func (e Engine) Start() {
 	fmt.Println("Engine Started")
 }

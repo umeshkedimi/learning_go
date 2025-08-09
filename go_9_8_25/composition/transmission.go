@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-type transmission struct {}
+type Transmission struct {}
 
-func (t transmission) ShiftUp() {
+func (t Transmission) ShiftUp() {
 	fmt.Println("Shifting up")
 }
 
-func (t transmission) ShiftDown() {
+func (t Transmission) ShiftDown() {
 	fmt.Println("Shifting Down")
 }
